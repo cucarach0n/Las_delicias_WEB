@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://fb.me/react-0.14.2.min.js"></script>
+	<script src="https://fb.me/react-dom-0.14.2.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+</head>
+<body>
+<div id="Padre">
+</div>
+<div id="Padre2">
+</div>
+<script type="text/babel">
+	var Hijo = React.createClass({
+		render : function(){
+			return React.DOM.div({children:[<h1>A</h1>,<h2>a</h2>]});
+		}
+	});
+	var Hijo2 = React.createClass({
+		render : function(){
+			return React.DOM.div({children:[React.DOM.h1({children:"A",value:'a'}),React.DOM.h2({children:"A"})]});
+		}
+	});
+	ReactDOM.render(<Hijo/>,document.getElementById('Padre'));
+	ReactDOM.render(<Hijo2/>,document.getElementById('Padre2'));
+</script>
+</body>
+</html>
+
+
+var publicaciones = this.props.pub.map(function(data){
+                        var foto = "url('../foto/publicaciones/"+data.foto +"') center / cover";
+                        
+                        
+
+                        return <div key={data.idpublicacion} className="demo-card-wide mdl-card mdl-shadow--2dp">
+                                    <div className="mdl-card__title" style={{background:foto}}>
+                                        <h2 className="mdl-card__title-text">
+                                        {data.titulo}</h2>
+                                    </div>
+                                    <div className="mdl-card__supporting-text">
+                                        {data.Descripcion}
+                                    </div>
+                                    <div className="mdl-card__actions mdl-card--border">
+                                        {data.documentos.map(function(doc){
+                                            return <table key={doc.idDocumento}>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <img style={{width:"30px",height:"30px"}} src={doc.ico} ></img>
+                                                                </td>
+                                                                <td colSpan="2">
+                                                                    <h5>{doc.nombre}</h5>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td></td>
+                                                                <td>{doc.descripcion}</td>
+                                                                <td><a href={doc.url}>descargar</a></td>
+                                                            </tr>
+                                                        </tbody>
+                                                   </table>         
+                                                   
+                                        })}
+                                    </div>
+                                    <div className="mdl-card__actions mdl-card--border">
+                                        <center><a value={data.idpublicacion} className="btntarea mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Tarea
+                                        </a>
+                                        <a value={data.idpublicacion} className="btnexamen mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Examen
+                                        </a>
+                                        <a value={data.idpublicacion} className="btndocumento mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Documento
+                                        </a></center>
+                                    </div>
+                                    <div className="mdl-card__menu">
+                                        <button className="mdl-button mdl-js-button mdl-button--icon">
+                                            <i className="material-icons">mood</i>
+                                        </button>
+                                    </div>
+                            </div>
+                    });

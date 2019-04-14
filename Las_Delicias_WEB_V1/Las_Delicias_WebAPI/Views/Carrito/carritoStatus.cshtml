@@ -1,0 +1,9 @@
+﻿@model List<Las_Delicias_WebAPI.Models.CarritoMODEL>
+@*<div class="btn-toolbar" role="toolbar">
+        <button type="button" class="btn btn-default btn-lg">
+            <span class=".glyphicon .glyphicon-cutlery"></span>@Model.Count();
+        </button>
+    </div>*@
+@{ Layout = null; }
+
+<a href="#"><i class="fas fa-shopping-cart fa-2x"></i>@Model.Count()</a>

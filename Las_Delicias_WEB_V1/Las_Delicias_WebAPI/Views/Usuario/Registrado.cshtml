@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Registrado";
+}
+
+<h2>Registrado exitosamente</h2>
+<h2>Porfavor verifica tu correo, para activar tu cuenta</h2>
+<h2>fin del registro</h2>
+<h2 id="cuenta"></h2>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    var inicio = 6;
+    var h = document.getElementById("cuenta");
+    function contar() {
+        h.innerHTML = inicio.toString();
+        inicio = inicio - 1;
+        if (inicio == 0) {
+            window.location.replace("../Menu/Lista");
+        }
+    }
+    setInterval(contar,1000);
+</script>

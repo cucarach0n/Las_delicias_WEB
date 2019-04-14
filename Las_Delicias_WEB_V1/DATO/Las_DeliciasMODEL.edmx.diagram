@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9be5867bd80241e7b597df8dfc631c5d" Name="Diagram1">
+        <EntityTypeShape EntityType="BDLas_DeliciasModel.acceso_sistema" Width="1.5" PointX="10.5" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDLas_DeliciasModel.asistencia" Width="1.5" PointX="8.25" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDLas_DeliciasModel.boleta_cabe" Width="1.5" PointX="8.25" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDLas_DeliciasModel.cat_insumo" Width="1.5" PointX="12" PointY="40.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDLas_DeliciasModel.cat_plato" Width="1.5" PointX="9" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDLas_DeliciasModel.cliente" Width="1.5" PointX="3" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDLas_DeliciasModel.detalle_entrada_insumo" Width="1.5" PointX="16.5" PointY="32.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDLas_DeliciasModel.detalle_promocion" Width="1.5" PointX="9" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDLas_DeliciasModel.detalle_puntos" Width="1.5" PointX="7.5" PointY="40.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDLas_DeliciasModel.detalle_salida_insumo" Width="1.5" PointX="13.5" PointY="33.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDLas_DeliciasModel.distrito" Width="1.5" PointX="0.75" PointY="23.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDLas_DeliciasModel.Entrada_insumo" Width="1.5" PointX="8.25" PointY="30" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDLas_DeliciasModel.factura_cabe" Width="1.5" PointX="11.25" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDLas_DeliciasModel.insumo" Width="1.5" PointX="14.25" PointY="41" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDLas_DeliciasModel.menu" Width="1.5" PointX="11.25" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDLas_DeliciasModel.mesa" Width="1.5" PointX="3" PointY="18.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDLas_DeliciasModel.orden_cabe" Width="1.5" PointX="11.25" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDLas_DeliciasModel.ped_delivery_cabe" Width="1.5" PointX="11.25" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDLas_DeliciasModel.pedido_Cabe" Width="1.5" PointX="11.25" PointY="32.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDLas_DeliciasModel.per_cargo" Width="1.5" PointX="3.75" PointY="28.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDLas_DeliciasModel.personal" Width="1.5" PointX="6" PointY="22" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDLas_DeliciasModel.promocion" Width="1.5" PointX="6.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDLas_DeliciasModel.proveedor" Width="1.5" PointX="3" PointY="37.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDLas_DeliciasModel.puntos" Width="1.5" PointX="5.25" PointY="38.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDLas_DeliciasModel.reservacion" Width="1.5" PointX="5.25" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDLas_DeliciasModel.salida_insumo" Width="1.5" PointX="8.25" PointY="33.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDLas_DeliciasModel.tipo_comprobante" Width="1.5" PointX="9" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDLas_DeliciasModel.tipo_descuento" Width="1.5" PointX="4.5" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDLas_DeliciasModel.unidad_medida" Width="1.5" PointX="12" PointY="42.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDLas_DeliciasModel.usuarioCliente" Width="1.5" PointX="0.75" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDLas_DeliciasModel.Usuarios" Width="1.5" PointX="8.25" PointY="36.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDLas_DeliciasModel.venta" Width="1.5" PointX="9" PointY="44.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDLas_DeliciasModel.boleta_deta" Width="1.5" PointX="13.5" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDLas_DeliciasModel.factura_deta" Width="1.5" PointX="13.5" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDLas_DeliciasModel.orden_detalle" Width="1.5" PointX="16.5" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDLas_DeliciasModel.ped_delivery_deta" Width="1.5" PointX="13.5" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDLas_DeliciasModel.pedido_deta" Width="1.5" PointX="16.5" PointY="35.375" IsExpanded="true" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_84" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.FK__asistenci__cod_p__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_123" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_21" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_48" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_488" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_4881" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_85" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_62" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_5" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_10" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_1010" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_13" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_1342" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_18" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_201" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_111111" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_14433" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_134232" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_2001" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_1" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_3" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_2222222" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_4444443" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_150" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_16" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_63" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_1234" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_1443" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_200" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_20012" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_202" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_203" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_6222" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_67" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_204" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_59" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_61" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_79" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_81" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_82" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_72" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_80" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_60" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_9" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_65" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_66" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_69" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_3233" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_13456" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_83" ManuallyRouted="false" />
+        <AssociationConnector Association="BDLas_DeliciasModel.R_2" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,91 @@
+﻿@model Las_Delicias_WebAPI.Models.ClienteModel
+
+@{
+    ViewBag.Title = "Registrase y Haga su Pedido :D";
+}
+
+<h2>Registrase y Haga su Pedido :D</h2>
+
+
+@using (Html.BeginForm("Registrar","Cliente",FormMethod.Post,new { enctype = "multipart/form-data"}))
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            @Html.LabelFor(model => model.nomcliente, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.nomcliente, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.nomcliente, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group col-md-6">
+            @Html.LabelFor(model => model.imagenFile, htmlAttributes: new { @class = "control-label col-md-5" })
+            <div class="col-md-7">
+                @Html.TextBoxFor(model => model.imagenFile, new { type = "file", htmlAttributes = new { @class = "form-control-file" } })
+                @Html.ValidationMessageFor(model => model.imagenFile, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group col-md-6">
+            @Html.LabelFor(model => model.apecliente, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.apecliente, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.apecliente, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group col-md-3">
+            @Html.LabelFor(model => model.DNI_RUC, htmlAttributes: new { @class = "control-label col-md-7" })
+            <div class="col-md-5">
+                @Html.EditorFor(model => model.DNI_RUC, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DNI_RUC, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group col-md-3">
+            @Html.LabelFor(model => model.telefono, htmlAttributes: new { @class = "control-label col-md-7" })
+            <div class="col-md-5">
+                @Html.EditorFor(model => model.telefono, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.telefono, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="form-group col-md-6">
+            @Html.LabelFor(model => model.direccion, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.direccion, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.direccion, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group col-md-6">
+            @Html.LabelFor(model => model.cod_distrito, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.cod_distrito, new SelectList(ViewBag.distrito, "cod_distrito", "nomdistrito"), new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.cod_distrito, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+    </div>
+        <div class="form-group ">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Registrar Y Siguiente" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+    }
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    @section Scripts {
+
+        @Scripts.Render("~/bundles/jqueryval")
+    }

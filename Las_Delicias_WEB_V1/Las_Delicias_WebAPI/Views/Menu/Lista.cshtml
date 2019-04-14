@@ -1,0 +1,129 @@
+﻿@model IEnumerable<ENTIDAD.menu>
+
+@{
+    ViewBag.Title = "Lista";
+}
+
+<h2>Nuestro Catalogo</h2>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+@Styles.Render("~/Content/menuEstilo")
+@Styles.Render("~/Content/nuevo")
+<div class="container-fluid">
+    <div class="row">
+        <div style="width: 75%; margin: auto;">
+            @foreach (var menu in Model)
+            {
+                <div class="col-md-3 col-sm-4 col-xs-12 single_portfolio_text" style="margin-right: 2%;margin-left: 2%;margin-top: 2%;margin-bottom: 2%;border-radius: 30px;">
+                    <img src="@Html.DisplayFor(modelMenu => menu.imagen)" alt="" />
+                    <div class="portfolio_images_overlay text-center" style="border-radius: 50px;">
+                        <h6 class="clrd-font">@Html.DisplayFor(modalMenu => menu.nomplato)</h6>
+                        <p class="clrd-font product_price"> <i class="fa fa-usd clrd-font" aria-hidden="true"></i> @Html.DisplayFor(modelMenu => menu.precio)</p>
+                        <button type="button" class="btn btn-success" onclick="agregarCarrito('@Html.DisplayFor(modelMenu => menu.cod_menu)')">Agregar</button>
+                    </div>
+
+                    <a class="fancybox" rel="ligthbox" href="@Html.DisplayFor(modelMenu => menu.imagen)">
+                        <div class="zoom"></div>
+                    </a>
+                </div>
+            }
+
+        </div>
+
+    </div>
+</div>
+        
+
+    <div class="alertify  ajs-basic ajs-movable ajs-pinnable ajs-pulse ajs-no-padding ajs-out ajs-hidden ajs-closable">
+        <div class="ajs-modal">
+            <div class="ajs-dialog">
+                <div class="ajs-body">
+                    <div class="ajs-content">
+                        <div id="agregarForm">
+                            <div class="form-group">
+                                <center><label for="cantidad" style="display:block; font-size:35px;"> Cantidad </label></center>
+                                <center><input class="form-control form-control-lg" id="cantidad" type="number" min="1" max="10" value="1" /></center>
+
+                            </div>
+                            <center><button type="button" data-idmenu="0" id="agregarCarrito" onclick="enviarDatos();" style="width:50%" class="btn btn-success btn-lg">Agregar</button></center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+    @Scripts.Render("~/bundles/ScriptMenu")
+
+    <script>
+
+    function enviarDatos() {
+        var Cantidad = document.getElementById("cantidad").value;
+        var IdMenu = document.getElementById("agregarCarrito").dataset.idmenu;
+        console.log('enviando datos al servidor...');
+        $.ajax({
+            url: '@Url.Action("CarritoApi", "api")',
+            type: 'POST',
+            data: JSON.stringify({
+                "IdMenu": IdMenu,
+                "Cantidad": parseInt(Cantidad),
+            }),
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            //success: function (result) {
+            //    alertify.success("Se agrego al carrito");
+            //    alertify.closeAll();
+            //}
+            statusCode: {
+                200: function () {
+                    alertify.success("Se agrego al carrito");
+                    alertify.closeAll();
+                }}
+        });
+
+
+    }
+    function agregarCarrito(menu) {
+        var butonCarrito = document.getElementById("agregarCarrito");
+        butonCarrito.dataset.idmenu = menu;
+
+
+        alertify.genericDialog || alertify.dialog('genericDialog', function () {
+            return {
+                main: function (content) {
+                    this.setContent(content);
+                },
+                setup: function () {
+                    return {
+                        focus: {
+                            element: function () {
+                                return this.elements.body.querySelector(this.get('selector'));
+                            },
+                            select: true
+                        },
+                        options: {
+                            basic: true,
+                            maximizable: false,
+                            resizable: false,
+                            padding: false
+                        }
+                    };
+                },
+                settings: {
+                    selector: undefined
+                }
+            };
+        });
+        //force focusing password box
+        alertify.genericDialog($('#agregarForm')[0]).set('selector', 'input[type="text"]');
+
+    };
+
+    </script>

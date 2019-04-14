@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A25D5DF6-81AF-43F2-81B9-7E7775038681}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ENTIDAD</RootNamespace>
+    <AssemblyName>ENTIDAD</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="acceso_sistema.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="asistencia.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="boleta_cabe.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="boleta_deta.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="buscar_asistenciaper_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="buscar_cargo_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="buscar_cat_plato2_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="buscar_cat_plato_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="buscar_cliente2_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="buscar_cliente3_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="buscar_cliente_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="buscar_cupo_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="buscar_dely_fecha_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="buscar_emple2_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="buscar_emple3_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Buscar_insumo2_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Buscar_insumo_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="buscar_menu_2_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="buscar_menu_3_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="buscar_menu_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="buscar_personal_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="buscar_promocion_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="buscar_promo_cod_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Buscar_proveedor2_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Buscar_proveedor_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="buscar_reserva2_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="buscar_reserva_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="buscar_user2_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="buscar_user_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="cat_insumo.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="cat_plato.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="cliente.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="contar_dely_total_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="detalle_entrada_insumo.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="detalle_promocion.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="detalle_puntos.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="detalle_salida_insumo.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="distrito.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entrada_insumo.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="factura_cabe.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="factura_deta.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="insumo.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Las_DeliciasMODELContext.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="listar_asistencia_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="listar_cargo_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Listar_Catid_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="listar_cat_plato_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="listar_clientes_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="listar_clientes_tipo_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="listar_comprobantes_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="listar_dely_deta_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="listar_dely_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="listar_detalle_delivery_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="listar_distrito_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Listar_insumo_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="listar_ip_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="listar_menu_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="listar_mesas_reservadas_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="listar_mesas_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="listar_mesas_sin_reserva_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="listar_ordenes_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="listar_ordenes_sin_pagar_caja_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="listar_ordenes_sin_pagar_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="listar_ordens_cabe_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="listar_orden_detalle_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="listar_personal_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="listar_personal_turno_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="listar_promociones_imprimir_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="listar_promociones_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Listar_proveedor_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="listar_reservacion_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="listar_tipo_descuento_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="listar_unidad_medida_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="listar_usuarios_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="menu.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mesa.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="orden_cabe.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="orden_detalle.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pedido_Cabe.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pedido_deta.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ped_delivery_cabe.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ped_delivery_deta.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="personal.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="per_cargo.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="promocion.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="proveedor.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="puntos.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="reservacion.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="salida_insumo.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tipo_comprobante.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tipo_descuento.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="unidad_medida.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usuarioCliente.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usuarioClienteModel.cs" />
+    <Compile Include="Usuarios.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="venta.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="verificar_datos_Result.cs">
+      <DependentUpon>Las_DeliciasMODELContext.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Las_DeliciasMODELContext.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Las_DeliciasMODELContext.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
